@@ -25,6 +25,24 @@
             color: #000000;
         }
         
+        /* Mobile-specific selection styling */
+        * {
+            -webkit-tap-highlight-color: #ffeb3b;
+        }
+        
+        /* Additional mobile selection support */
+        @media screen and (max-width: 768px) {
+            ::selection {
+                background-color: #ffeb3b !important;
+                color: #000000 !important;
+            }
+            
+            ::-moz-selection {
+                background-color: #ffeb3b !important;
+                color: #000000 !important;
+            }
+        }
+        
         .container {
             max-width: 800px;
             margin: 0 auto;
