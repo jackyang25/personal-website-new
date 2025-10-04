@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jack yang</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        
+        ::selection {
+            background-color: #ffeb3b;
+            color: #000000;
+        }
+        
+        ::-moz-selection {
+            background-color: #ffeb3b;
+            color: #000000;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #000000;
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+        
+        h2 {
+            color: #000000;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+        
+        .ascii-art {
+            text-align: left;
+            font-size: 10px;
+            color: #000000;
+            margin: 10px 0;
+        }
+        
+        .nav {
+            margin: 20px 0;
+        }
+        
+        .nav a {
+            color: #000000;
+            text-decoration: underline;
+            margin-right: 20px;
+        }
+        
+        .nav a:hover {
+            color: #666666;
+        }
+        
+        .section {
+            margin: 20px 0;
+        }
+        
+        .project {
+            margin: 15px 0;
+        }
+        
+        .project h3 {
+            color: #000000;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1em;
+            font-weight: normal;
+        }
+        
+        .project p {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        
+        .contact-info {
+            margin: 15px 0;
+        }
+        
+        .contact-info a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        
+        .contact-info a:hover {
+            color: #666666;
+        }
+        
+        .about-bio-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        
+        .bio-text {
+            flex: 2;
+            line-height: 1.6;
+        }
+        
+        .profile-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999999;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #f8f8f8;
+            padding: 20px;
+            overflow-x: auto;
+            color: #666666;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ascii-art">
+<pre>
+     ██╗ █████╗   ██████╗██╗  ██╗    ██╗   ██╗ █████╗ ███╗   ██╗ ██████╗ 
+     ██║ ██╔══██╗██╔════╝██║ ██╔╝    ╚██╗ ██╔╝██╔══██╗████╗  ██║██╔════╝ 
+     ██║ ███████║██║     █████╔╝      ╚████╔╝ ███████║██╔██╗ ██║██║  ███╗
+██   ██║ ██╔══██║██║     ██╔═██╗       ╚██╔╝  ██╔══██║██║╚██╗██║██║   ██║
+╚█████╔╝ ██║  ██║╚██████╗██║  ██╗       ██║   ██║  ██║██║ ╚████║╚██████╔╝
+ ╚════╝  ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝       ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+</pre>
+        </div>
+        
+        <div class="nav">
+            <a href="#about">about</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+            <a href="Jack_Yang_Resume.pdf" target="_blank">resume</a>
+        </div>
+        
+        <div class="section" id="about">
+            <h2>about me</h2>
+            <div class="about-bio-layout">
+                <div class="bio-text">
+                    <p>hi, welcome to my profile. i'm a software engineer with experience in machine learning, ai agents, and full stack engineering. i graduated from new york university in 2025 with a bachelor's in computer science.</p>
+                    <p>i grew up in new york city and enjoy traveling, working out, and meeting new people. some of my favorite places i've been to are pakistan and the uae during a study abroad trip. feel free to reach out if you want to connect!</p>
+                </div>
+                <div class="profile-image">
+                    <img src="image.jpeg" alt="jack yang" style="max-width: 200px; height: auto; border-radius: 8px;">
+                    <p style="font-size: 0.9em; color: #666; margin: 5px 0 0 0; font-style: italic;">Dolmabahçe Palace, Istanbul, October 2023</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="projects">
+            <h2>latest project</h2>
+            
+            <div class="project">
+                <h3>distributed agents system with mcp integration</h3>
+                <p>a containerized multi-agent system for homebuying assistance using langgraph orchestrator and mcp servers. features specialized agents for budgeting, program matching, and neighborhood discovery with pgvector, cloud db, and gcp integration.</p>
+                <p><strong>tech stack:</strong> python, langgraph, docker, postgresql, supabase, fastapi, gradio</p>
+                <p><strong>github:</strong> <a href="https://github.com/jackyang25/distributed-agents-system-with-mcp-integration">github.com/jackyang25/distributed-agents-system-with-mcp-integration</a></p>
+            </div>
+        </div>
+        
+        <div class="section" id="contact">
+            <h2>contact</h2>
+            <div class="contact-info">
+                <p><strong>email:</strong> <a href="mailto:jy3784@nyu.edu">jy3784@nyu.edu</a></p>
+                <p><strong>github:</strong> <a href="https://github.com/jackyang25">github.com/jackyang25</a></p>
+                <p><strong>linkedin:</strong> <a href="https://www.linkedin.com/in/jackyang25/">linkedin.com/in/jackyang25</a></p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>last updated: <span id="date"></span></p>
+        </div>
+    </div>
+    
+    <script>
+        // simple script to show current date
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
+        
+        // add some terminal-like effects
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12') {
+                console.log('welcome to the matrix...');
+            }
+        });
+    </script>
+</body>
+</html>
