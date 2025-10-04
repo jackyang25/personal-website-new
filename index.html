@@ -271,7 +271,7 @@
             <a href="https://github.com/jackyang25">projects</a>
             <a href="#contact">contact</a>
             <a href="Jack_Yang_Resume.pdf" target="_blank">resume</a>
-            <button class="theme-toggle" onclick="toggleTheme()">●</button>
+            <button class="theme-toggle" onclick="toggleTheme()">◐</button>
         </div>
         
         <div class="section" id="about">
@@ -346,10 +346,10 @@
             
             // Update button text and icon
             if (body.classList.contains('dark-mode')) {
-                toggleButton.textContent = '○';
+                toggleButton.textContent = '◑';
                 toggleButton.classList.add('active');
             } else {
-                toggleButton.textContent = '●';
+                toggleButton.textContent = '◐';
                 toggleButton.classList.remove('active');
             }
             
@@ -364,10 +364,10 @@
             
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
-                toggleButton.textContent = '○';
+                toggleButton.textContent = '◑';
                 toggleButton.classList.add('active');
             } else {
-                toggleButton.textContent = '●';
+                toggleButton.textContent = '◐';
                 toggleButton.classList.remove('active');
             }
         }
