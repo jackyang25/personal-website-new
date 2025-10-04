@@ -13,6 +13,110 @@
             padding: 20px;
             line-height: 1.4;
             zoom: 0.9;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode h1,
+        body.dark-mode h2 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .ascii-art {
+            color: #e0e0e0;
+            background-color: transparent;
+        }
+
+        body.dark-mode .nav a {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .nav a:hover {
+            color: #ffffff;
+        }
+
+        body.dark-mode .project {
+            background-color: transparent;
+            border: none;
+        }
+
+        body.dark-mode .about-bio-layout {
+            background-color: transparent;
+        }
+
+        body.dark-mode .profile-image {
+            background-color: transparent;
+        }
+
+        body.dark-mode .profile-image img {
+            border: 1px solid #444;
+        }
+
+        body.dark-mode .project h3 a {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .project h3 a:hover {
+            color: #ffffff;
+        }
+
+        body.dark-mode .contact-info a {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .contact-info a:hover {
+            color: #ffffff;
+        }
+
+        body.dark-mode .footer {
+            color: #888;
+        }
+
+        /* Theme toggle button */
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            vertical-align: middle;
+            color: #999;
+        }
+
+        .theme-toggle:hover {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .theme-toggle.active {
+            background: #e8e8e8;
+            color: #000;
+        }
+
+        body.dark-mode .theme-toggle {
+            color: #666;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            background: #333;
+            color: #ccc;
+        }
+
+        body.dark-mode .theme-toggle.active {
+            background: #444;
+            color: #fff;
         }
         
         ::selection {
@@ -184,6 +288,7 @@
             <a href="https://github.com/jackyang25">projects</a>
             <a href="#contact">contact</a>
             <a href="Jack_Yang_Resume.pdf" target="_blank">resume</a>
+            <button class="theme-toggle" onclick="toggleTheme()">☀</button>
         </div>
         
         <div class="section" id="about">
@@ -233,6 +338,75 @@
                 console.log('welcome to the matrix...');
             }
         });
+
+        // Mobile highlight fallback
+        function addMobileHighlight() {
+            // Check if we're on mobile
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // Add a class to body for mobile-specific styling
+                document.body.classList.add('mobile-device');
+                
+                // Add touch event listeners for better mobile interaction
+                document.addEventListener('touchstart', function(e) {
+                    if (e.target.tagName === 'P' || e.target.tagName === 'SPAN') {
+                        e.target.style.backgroundColor = '#ffeb3b';
+                        e.target.style.color = '#000000';
+                    }
+                });
+                
+                document.addEventListener('touchend', function(e) {
+                    setTimeout(() => {
+                        if (e.target.tagName === 'P' || e.target.tagName === 'SPAN') {
+                            e.target.style.backgroundColor = '';
+                            e.target.style.color = '';
+                        }
+                    }, 200);
+                });
+            }
+        }
+
+        // Run mobile highlight setup
+        addMobileHighlight();
+
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.theme-toggle');
+            
+            body.classList.toggle('dark-mode');
+            
+            // Update button text and icon
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '☾';
+                toggleButton.classList.add('active');
+            } else {
+                toggleButton.textContent = '☀';
+                toggleButton.classList.remove('active');
+            }
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+
+        // Load saved theme on page load
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const toggleButton = document.querySelector('.theme-toggle');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                toggleButton.textContent = '☾';
+                toggleButton.classList.add('active');
+            } else {
+                toggleButton.textContent = '☀';
+                toggleButton.classList.remove('active');
+            }
+        }
+
+        // Load theme when page loads
+        loadTheme();
     </script>
 </body>
 </html>
