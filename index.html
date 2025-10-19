@@ -181,8 +181,8 @@
         
         h2 {
             color: #000000;
-            margin-top: 30px;
-            margin-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-size: 1.2em;
             font-weight: normal;
         }
@@ -219,11 +219,11 @@
         }
         
         .section {
-            margin: 20px 0;
+            margin: 0;
         }
         
         .project {
-            margin: 15px 0;
+            margin: 20px 0;
         }
         
         .section > div:not(.about-bio-layout) {
@@ -279,12 +279,21 @@
             display: flex;
             gap: 40px;
             align-items: flex-start;
-            margin: 0;
+            margin: 0 0 20px 0;
         }
         
         .bio-text {
             flex: 2;
             line-height: 1.6;
+        }
+        
+        .bio-text p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        .bio-text p:last-child {
+            margin-bottom: 0;
         }
         
         .profile-image {
@@ -336,7 +345,8 @@
             <div class="about-bio-layout">
                 <div class="bio-text">
                     <p>Hi, I'm Jack. I'm currently a software engineer. I was born in NYC and I graduated from NYU with my bachelor's in computer science.</p>
-                    <p>Some of my favorite experiences came from visiting the Middle East during a study abroad trip. Feel free to reach out at <a href="mailto:jy3784@nyu.edu" style="text-decoration: none;">jy3784@nyu.edu</a>.</p>
+                    <br>
+                    <p>Some of my favorite experiences came from visiting the Middle East during a study abroad semester. Feel free to reach out at <a href="mailto:jy3784@nyu.edu" style="text-decoration: none;">jy3784@nyu.edu</a>.</p>
                 </div>
                 <div class="profile-image">
                     <img src="image.jpeg" alt="Jack Yang" style="max-width: 200px; height: auto; border-radius: 8px;">
