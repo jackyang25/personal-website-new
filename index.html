@@ -487,13 +487,13 @@
             const savedTheme = localStorage.getItem('theme');
             const toggleButton = document.querySelector('.theme-toggle');
             
-            if (savedTheme === 'dark') {
+            if (savedTheme === 'light') {
+                toggleButton.textContent = '◐';
+                toggleButton.classList.remove('active');
+            } else {
                 document.body.classList.add('dark-mode');
                 toggleButton.textContent = '◑';
                 toggleButton.classList.add('active');
-            } else {
-                toggleButton.textContent = '◐';
-                toggleButton.classList.remove('active');
             }
         }
 
