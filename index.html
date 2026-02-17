@@ -358,6 +358,21 @@
             font-size: 0.8em;
             border-radius: 4px;
         }
+
+        @media (max-width: 768px) {
+            .about-bio-layout {
+                flex-direction: column;
+            }
+
+            .profile-image {
+                order: -1;
+                margin-bottom: 20px;
+            }
+
+            .bio-text {
+                order: 1;
+            }
+        }
     </style>
 </head>
 
